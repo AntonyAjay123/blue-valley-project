@@ -1,0 +1,13 @@
+.app-container{
+    background-color: var(--c2);
+    height:100vh !important;
+    width: 100vw  !important;;
+}
+
+.logo-section{
+    cursor: pointer;
+    img{
+        width: 150px;
+        margin-top: 2.5px
+    }
+}

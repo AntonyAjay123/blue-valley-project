@@ -1,0 +1,136 @@
+@media (max-width: 992px) {
+
+    .desktop-only{
+        display:none !important;
+    }
+}
+ .nav_items_parent {
+    display: flex;
+    justify-content: center;
+    transition: .25s linear;
+    position: absolute;
+    top: 92.18px;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    width:100vw;
+}
+
+.nav-slider{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 844px;
+    height: 540.763px;
+}
+.main-navbar {
+  background-color:var(--c2);
+  border-bottom: 1px solid #e5e5e5;
+  padding: 20px 0;
+  display: flex;
+  width:100%;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .nav-link,
+  .dropdown-toggle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #444 !important;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+    padding: 0 !important;
+
+    &:hover {
+      color: #ff2b2b !important;
+    }
+  }
+
+  .active-link {
+    color: #ff2b2b !important;
+  }
+
+  .dropdown-menu {
+    border-radius: 0;
+    border: 1px solid #eee;
+    padding: 8px 0;
+  }
+
+  .dropdown-item {
+    font-size: 15px;
+    padding: 10px 18px;
+
+    &:hover {
+      background: #f5f5f5;
+    }
+  }
+}
+.main-navbar-options{
+    width:75%;
+    display: flex;
+    justify-content: space-around;
+}
+.nav-items:before {
+    background: #fff;
+    content: "";
+    height: 86px;
+    left: -32px;
+    position: absolute;
+    top: -30px;
+    transform: rotate(-40deg);
+    -o-transform: rotate(-40deg);
+    -ms-transform: rotate(-40deg);
+    -webkit-transform: rotate(-40deg);
+    -moz-transform: rotate(-40deg);
+    width: 44px;
+    z-index: 0;
+}
+.nav_items:after {
+    background: #fff;
+    content: "";
+    height: 86px;
+    position: absolute;
+    right: -32px;
+    top: -30px;
+    transform: rotate(40deg);
+    -o-transform: rotate(40deg);
+    -ms-transform: rotate(40deg);
+    -webkit-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+    width: 44px;
+    z-index: 0;
+}
+.nav-items{
+        display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    background: var(--c2);
+    position: relative;
+    width: calc(100% - 120px);
+}
+.nav-option{
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 20px 15px;
+    font-size: 15px;
+    color: var(--c4);
+    cursor: pointer;
+    position: relative;
+}
