@@ -11,7 +11,7 @@ export const HomeSlider = () => {
     const slides = [
         {
             image: NorthTownImage,
-            title: "NANDI MAGNOLIA",
+            title: "NorthTown",
             subtitle: "Villa Plots at the misty foot of Nandi Hills,",
             city: "Bengaluru"
         },
