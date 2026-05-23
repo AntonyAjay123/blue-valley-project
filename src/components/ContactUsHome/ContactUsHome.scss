@@ -1,0 +1,44 @@
+.contact-us-section{
+    background-image: url(../../assets/contactUs.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center 109.8px;
+    position: relative;
+    padding: 80px 0;
+    display: flex;
+    .contact-us-title{
+        color:var(--c2);
+        display:flex;
+        span{
+        font-size: inherit;
+    color: var(--c1);
+    margin-left: 0;
+    padding-left: 0;
+    }
+    }
+}
+
+.form-label{
+    color:var(--c2)
+}
+
+.form-input{
+    height: 40px;
+    border-radius: 0;
+    padding-left: 10px;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #999999;
+    background-color: #ffffff4d;
+    color: #fff;
+    outline: 0px;
+}
+.form-control,
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  box-shadow: none;
+  outline: none;
+  color: white;
+}
