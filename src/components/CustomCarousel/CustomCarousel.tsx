@@ -3,7 +3,7 @@ import { Carousel } from "react-bootstrap";
 import "./CustomCarousel.scss";
 
 import NorthTownImage from '../../assets/northtown.jpg'
-import MarineViewImage from '../../assets/marine_view.jpeg'
+import MadhubanImage from '../../assets/madhuban.png'
 import { CustomButton } from "../CustomButton/CustomButton";
 
 export const HomeSlider = () => {
@@ -11,15 +11,15 @@ export const HomeSlider = () => {
     const slides = [
         {
             image: NorthTownImage,
-            title: "NorthTown",
-            subtitle: "Villa Plots at the misty foot of Nandi Hills,",
+            title: "North Town",
+            subtitle: "Villa Plots at the misty foot of Nandi Hills",
             city: "Bengaluru"
         },
         {
-            image: MarineViewImage,
-            title: "MARINE VIEW",
-            subtitle: "Premium seaside properties,",
-            city: "Mangalore"
+            image: MadhubanImage,
+            title: "Madhuban",
+            subtitle: "Premium gated community with villa plots near bangalore internal airport",
+            city: "Devanahalli Town, Bengaluru"
         }
     ];
 

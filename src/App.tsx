@@ -10,6 +10,9 @@ import {BrowserRouter, Route} from 'react-router-dom'
 import { Routes,Router } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Home } from './pages/Home'
+import { FooterHeader } from './components/Footer/FooterHeader'
+import {ContactUs } from './pages/Contact'
+import { About } from './pages/About'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,7 +23,10 @@ function App() {
       <Header/>
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path='/contact' element={<ContactUs/>}/>
+        <Route path='/about' element={<About/>}/>
       </Routes>
+      <FooterHeader/>
     </div>
       </>
   )

@@ -1,0 +1,38 @@
+.contact-container{
+    display:flex;
+    padding:32px;
+    gap:16px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-input{
+    border: 1px solid rgb(229, 229, 229);
+    border-radius: 0;
+    padding-left: 10px;
+    width: 100%;
+    background: #fff;
+}
+
+.contact-input-label{
+    color: black;
+}
+.contact-input-container{
+    width:50%;
+}
+.contact-details-section{
+    display:flex;
+    flex-direction: column;
+    gap:24px;
+    margin-left:16px;
+}
+.contact-detail-one{
+    color: var(--c1);
+}
+
+.contact{
+    margin-left:8px;
+    color:black;
+}

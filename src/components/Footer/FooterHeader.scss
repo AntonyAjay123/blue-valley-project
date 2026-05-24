@@ -1,0 +1,21 @@
+.footer-header{
+        position: relative;
+    background-color: var(--c1);
+    color: var(--c2);
+    display: flex;
+    justify-content: space-evenly;
+    .contact-detail{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 15px;
+    max-width: 250px;
+    margin: 0;
+    text-align: center;
+    font-style: normal;
+        padding:16px;
+        p{
+            margin-top:16px
+        }
+    }
+}

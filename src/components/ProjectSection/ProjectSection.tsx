@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap";
 import NorthTown from '../../assets/northtown.jpg'
-import MarineView from '../../assets/marine_view.jpeg'
+import Madhuban from '../../assets/madhuban.png'
 import { ProjectCard } from "./ProjectCard";
 import './Project.scss'
 export const ProjectSection = ()=>{
@@ -14,10 +14,10 @@ export const ProjectSection = ()=>{
         },
         {
             id:2,
-            image:MarineView,
-            projectName:'Marine View',
-            text:'Villa Plots at the misty foot of Nandi Hills, Bengaluru',
-            city:'Bengaluru,Karnataka'
+            image:Madhuban,
+            projectName:'Madhuban',
+            text:'Premium gated community with villa plots near bangalore internal airport',
+            city:'DEVANAHALLI TOWN, BANGALORE'
         }
     ]
 
