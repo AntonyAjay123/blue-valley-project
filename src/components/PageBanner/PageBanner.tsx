@@ -14,7 +14,7 @@ type PageBannerProps = {
 export const PageBanner = ({image,title,currentPage}:PageBannerProps)=>{
     const navigate = useNavigate()
     console.log(image,title,currentPage)
-    return (<div className="banner-container" style={{backgroundImage:image}}>
+    return (<div className="banner-container" style={{backgroundImage:`url(${image})`}}>
         <div className='banner-inner-container'>
             <h1 className='banner-title'>{title}</h1>
             <div>

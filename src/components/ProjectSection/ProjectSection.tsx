@@ -3,21 +3,29 @@ import NorthTown from '../../assets/northtown.jpg'
 import Madhuban from '../../assets/madhuban.png'
 import { ProjectCard } from "./ProjectCard";
 import './Project.scss'
+import { useNavigate } from "react-router-dom";
 export const ProjectSection = ()=>{
+    const navigate = useNavigate()
     const projects = [
         {
             id:1,
             image:NorthTown,
             projectName:'North Town',
             text:'Villa Plots at the misty foot of Nandi Hills, Bengaluru',
-            city:'DODDABALLAPURA ROAD, BANGALORE'
+            city:'DODDABALLAPURA ROAD, BANGALORE',
+            action:()=>{
+                navigate('/projects/northtown')
+            }
         },
         {
             id:2,
             image:Madhuban,
             projectName:'Madhuban',
             text:'Premium gated community with villa plots near bangalore internal airport',
-            city:'DEVANAHALLI TOWN, BANGALORE'
+            city:'DEVANAHALLI TOWN, BANGALORE',
+            action:()=>{
+                navigate('/projects/madhuban')
+            }
         }
     ]
 
