@@ -14,7 +14,7 @@ export const CustomNavbar=()=>{
                 <Container className="nav-items">
                     <span className="nav-option" onClick={()=>navigate('/')}>Home</span>
                     <span className="nav-option" onClick={()=>navigate('/about')}>About</span>
-                    <span className="nav-option">Projects</span>
+                    <span className="nav-option" onClick={()=>navigate('/projects')}>Projects</span>
                     <span className="nav-option" onClick={()=>{navigate('contact')}}>Contact</span>
                 </Container>
             </Container>

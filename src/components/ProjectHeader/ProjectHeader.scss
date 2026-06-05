@@ -1,0 +1,20 @@
+.project-header{
+    background: #fff;
+    position: fixed;
+    top: 0;
+    color: #fff;
+    width: 100%;
+    z-index: 1;
+}
+.project-header-container{
+    width:100%;
+}
+
+.project-nav-options{
+    width:100%;
+    display:flex;
+    justify-content: flex-end;
+    .project-nav-option{
+        color: #581557
+    }
+}

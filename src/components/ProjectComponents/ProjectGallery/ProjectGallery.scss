@@ -1,0 +1,13 @@
+.image-container{
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    .project-image{
+        width:33.333%;
+        img{
+            width:75%;
+            margin-bottom:16px;
+            border-radius: .25rem !important;
+        }
+    }
+}

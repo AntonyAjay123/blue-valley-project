@@ -4,7 +4,10 @@ import Madhuban from '../../assets/madhuban.png'
 import { ProjectCard } from "./ProjectCard";
 import './Project.scss'
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setCurPage, setCurProject } from "../../store/pageSlice";
 export const ProjectSection = ()=>{
+    const dispatch = useDispatch()
     const navigate = useNavigate()
     const projects = [
         {
@@ -14,6 +17,8 @@ export const ProjectSection = ()=>{
             text:'Villa Plots at the misty foot of Nandi Hills, Bengaluru',
             city:'DODDABALLAPURA ROAD, BANGALORE',
             action:()=>{
+                dispatch(setCurPage('projects'))
+                dispatch(setCurProject('northtown'))
                 navigate('/projects/northtown')
             }
         },
@@ -24,6 +29,8 @@ export const ProjectSection = ()=>{
             text:'Premium gated community with villa plots near bangalore internal airport',
             city:'DEVANAHALLI TOWN, BANGALORE',
             action:()=>{
+                dispatch(setCurPage('projects'))
+                dispatch(setCurProject('madhuban'))
                 navigate('/projects/madhuban')
             }
         }
@@ -35,7 +42,7 @@ export const ProjectSection = ()=>{
             <div className="project-section">
             {projects.map((project)=>{
                 return (<ProjectCard key={project.id} image={project.image}
-                    title={project.projectName} text={project.text} city={project.city} buttonAction={()=>{}}/>)
+                    title={project.projectName} text={project.text} city={project.city} buttonAction={project.action}/>)
             })}
         </div>
         </Container>

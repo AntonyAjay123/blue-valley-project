@@ -13,19 +13,26 @@ import { Home } from './pages/Home'
 import { FooterHeader } from './components/Footer/FooterHeader'
 import {ContactUs } from './pages/Contact'
 import { About } from './pages/About'
-
+import { Projects } from './pages/Projects'
+import { useSelector } from 'react-redux'
+import type { RootState } from './store/store'
+import { ProjectHeader } from './components/ProjectHeader/ProjectHeader'
+import { NorthTown } from './pages/NorthTown'
+import { Madhuban } from './pages/Madhuban'
 function App() {
   const [count, setCount] = useState(0)
-
+  const curProject = useSelector((state:RootState)=>state.page.curProject)
   return (
     <>
     <div className='app-container'>
-      <Header/>
+      {curProject===''?<Header/>:<ProjectHeader/>}
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/contact' element={<ContactUs/>}/>
         <Route path='/about' element={<About/>}/>
-        {/* <Route path='project' element={}/> */}
+        <Route path='/projects' element={<Projects/>}/>
+        <Route path='/projects/northtown' element={<NorthTown/>}/>
+        <Route path='/projects/madhuban' element={<Madhuban/>}/>
       </Routes>
       <FooterHeader/>
     </div>

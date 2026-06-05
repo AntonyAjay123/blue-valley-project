@@ -1,0 +1,32 @@
+.project-banner{
+    height:100vh;
+    width: 100%;
+    background-size: 90% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    .contact-form{
+    width: 300px;
+    padding: 20px;
+    background: #ffffff4d;
+    position: absolute;
+    top: 25vh;
+    left: 15vh;
+    margin: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px #00000030, 0 6px 6px #0000003b;
+    span{
+        color:#581557;
+        font-size: 2rem;
+    }
+    }
+    .project-contact-input{
+        border: none;
+    padding: 5px 5px 5px 10px;
+    font-size: 16px;
+    outline: 0px;
+    resize: none;
+    border-radius: 4px;
+    background-color: var(--c2);
+    }
+}

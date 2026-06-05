@@ -2,6 +2,7 @@ import './FooterHeader.scss'
 import EmailIcon from "@mui/icons-material/Email";
 import CallIcon from '@mui/icons-material/Call';
 import PlaceIcon from "@mui/icons-material/Place";
+import { FooterBody } from './FooterBody';
 
 type contactDetailType = {
     id:string;
@@ -27,6 +28,7 @@ export const FooterHeader = () =>{
         }
     ]
     return (
+        <div className='footer-container'>
         <div className="footer-header">
             {contactDetails.map((contactDetail)=>{
                 return <div className='contact-detail'>
@@ -34,6 +36,8 @@ export const FooterHeader = () =>{
                     <p>{contactDetail.value}</p>
                 </div>
             })}
+        </div>
+        <FooterBody/>
         </div>
     )
 }

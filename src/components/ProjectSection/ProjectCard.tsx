@@ -17,14 +17,14 @@ export const ProjectCard = ({image,title,text,city,buttonAction}:CardProps)=>{
             <Card.Body className="project-card-body">
         <Card.Title className="project-card-title">{title}</Card.Title>
         <Card.Text className="project-card-text">
-            <div className="project-card-city">
+            <span className="project-card-city">
                 {city}
-            </div>
-            <div className="project-card-description">
-            <p>
+            </span>
+            <span className="project-card-description">
+            <span>
                 {text}
-            </p>
-            </div>
+            </span>
+            </span>
         </Card.Text>
       </Card.Body>
         </Card>
