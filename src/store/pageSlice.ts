@@ -1,12 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
-type Task = {
-    id:string,
-    task:string,
-    dateTime:string
-}
-
 type pageState = {
     curPage:string,
     project:boolean,
