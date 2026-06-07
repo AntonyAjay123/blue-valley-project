@@ -15,8 +15,16 @@ import { ProjectLayout } from "../components/ProjectComponents/ProjectLayout/Pro
 import { northTownAbout } from "../constants"
 import LocationMap from '../assets/northtown_images/layout/locationMap.jpg'
 import { ProjectLocation } from "../components/ProjectComponents/ProjectLocation/ProjectLocation"
+import { useEffect } from "react"
+import { setCurPage, setCurProject } from "../store/pageSlice"
+import { useDispatch } from "react-redux"
 
 export const NorthTown = ()=>{
+    const dispatch = useDispatch();
+    useEffect(()=>{
+        dispatch(setCurPage('projects'))
+        dispatch(setCurProject('northtown'))
+      },[])
     const images = Object.values(
         import.meta.glob('../assets/northtown_images/*.{png,jpg,jpeg,svg}', {
             eager: true,

@@ -11,3 +11,37 @@
         }
     }
 }
+
+.project-image {
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
+
+.gallery-modal {
+  .modal-content {
+    background: transparent;
+    border: none;
+  }
+
+  .modal-body {
+    padding: 0;
+  }
+}
+
+.carousel-image {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+}

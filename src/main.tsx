@@ -7,9 +7,11 @@ import { Routes,Router } from 'react-router-dom'
 import { Header } from './components/Header/Header.tsx'
 import { Provider } from 'react-redux'
 import { store } from './store/store.ts'
+import { ScrollToTop } from './components/ScrollToTop.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <BrowserRouter>
+  <ScrollToTop/>
   <Provider store={store}>
   <App/>
   </Provider>

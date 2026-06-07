@@ -19,13 +19,17 @@ import type { RootState } from './store/store'
 import { ProjectHeader } from './components/ProjectHeader/ProjectHeader'
 import { NorthTown } from './pages/NorthTown'
 import { Madhuban } from './pages/Madhuban'
+import { ToastMessage } from './components/Toast/ToastMessage'
+import { ScrollToTop } from './components/ScrollToTop'
 function App() {
   const [count, setCount] = useState(0)
   const curProject = useSelector((state:RootState)=>state.page.curProject)
+  const toast = useSelector((state:RootState)=>state.toast)
   return (
     <>
     <div className='app-container'>
       {curProject===''?<Header/>:<ProjectHeader/>}
+       <ToastMessage />
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/contact' element={<ContactUs/>}/>

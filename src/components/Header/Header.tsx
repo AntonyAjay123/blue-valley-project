@@ -11,16 +11,28 @@ import { email, phoneNumber } from "../../constants";
 import { CustomNavbar } from "../navbar/Navbar";
 import { useEffect, useState } from "react";
 import Menu from "@mui/material/Menu";
+import { useNavigate } from "react-router-dom";
 
 export const Header = ()=>{
     const [menuOpen, setMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    const navigate = useNavigate()
     useEffect(()=>{console.log(menuOpen)},[menuOpen])
+    useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 90); // adjust height
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
     return (
-        <div className="app-topnavbar">
+        <div className={`app-topnavbar ${scrolled ? "scrolled" : ""}`}>
             <div className="top_parent_nav">
                 <div className="top_nav">
                     <div className="logo-section">
-                        <img src={logo}/>
+                        <img src={logo} onClick={()=>navigate("/")}/>
                     </div>
                     <div className="info_section desktop-only">
                         {/* <div className="info_top">
@@ -43,16 +55,24 @@ export const Header = ()=>{
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
-        <Dropdown.Item className="menu-options">Home</Dropdown.Item>
-        <Dropdown.Item className="menu-options">About</Dropdown.Item>
-        <Dropdown.Item className="menu-options">Projects</Dropdown.Item>
-        <Dropdown.Item className="menu-options">Contact Us</Dropdown.Item>
+        <Dropdown.Item className="menu-options" onClick={()=>navigate("/")}>Home</Dropdown.Item>
+        <Dropdown.Item className="menu-options" onClick={()=>navigate("/about")}>About</Dropdown.Item>
+        <Dropdown.Item className="menu-options" onClick={()=>navigate("/projects")}>Projects</Dropdown.Item>
+        <Dropdown.Item className="menu-options" onClick={()=>navigate("/contact")}>Contact Us</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
                     </div>
+                    {scrolled && (
+            <div className="merged-nav desktop-only">
+              <span className="nav-option" onClick={()=>navigate("/")} >Home</span>
+              <span className="nav-option"  onClick={()=>navigate("/about")}>About</span>
+              <span className="nav-option" onClick={()=>navigate("/projects")}>Projects</span>
+              <span className="nav-option"  onClick={()=>navigate("/contact")}>Contact</span>
+            </div>
+          )}
                 </div>
             </div>
-            <CustomNavbar/>
+            {!scrolled && <CustomNavbar/>}
         </div>
     )
 }

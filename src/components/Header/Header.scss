@@ -143,3 +143,38 @@
         width:150px;
     }
 }
+.app-topnavbar.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,.1);
+}
+.merged-nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.app-topnavbar.scrolled {
+
+  .info_section {
+    display: none;
+  }
+
+  .top_parent_nav {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .top_nav {
+    min-height: 80px;
+  }
+
+  .logo-section img {
+    height: 60px;
+    width: auto;
+  }
+}

@@ -1,0 +1,49 @@
+.why-madhuban {
+  margin-top: 80px;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  height: 100%;
+
+  border: 1px solid rgba(213, 180, 108, 0.25);
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 12px 32px rgba(88, 21, 87, 0.12);
+  }
+
+  h4 {
+    color: #581557;
+    font-weight: 700;
+    margin: 12px 0 16px;
+  }
+
+  ul {
+    padding-left: 18px;
+    margin: 0;
+
+    li {
+      color: #454646;
+      margin-bottom: 8px;
+    }
+  }
+
+  p {
+    width: 100% !important;
+    text-align: left;
+    font-style: normal !important;
+  }
+}
+
+.feature-icon {
+  font-size: 42px !important;
+  color: #d5b46c;
+}

@@ -7,7 +7,7 @@ import { setCurPage, setCurProject } from "../../store/pageSlice"
 export const FooterBody = ()=>{
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const handleProjectClick = (projectName)=>{
+    const handleProjectClick = (projectName:string)=>{
         dispatch(setCurPage('projects'))
         dispatch(setCurProject(projectName))
         navigate(`/projects/${projectName}`)

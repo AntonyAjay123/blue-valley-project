@@ -2,8 +2,10 @@ import { useState } from 'react'
 import './ContactUsHome.scss'
 import { Container,Form,Row,Col } from 'react-bootstrap'
 import { CustomButton } from '../CustomButton/CustomButton'
-
+import { useDispatch } from 'react-redux'
+import { showToast } from '../../store/toastSlice'
 export const ContactUsHome = ()=>{
+  const dispatch = useDispatch()
     const [formData,setFormData] = useState({
         'name':'',
         'email':'',
@@ -17,6 +19,40 @@ export const ContactUsHome = ()=>{
             ...prev,
             [name]: value,
   }));
+    }
+    const validateForm = () => {
+      const { name, email, mobile, message } = formData;
+       if (!name.trim()) {
+        console.log("checked name")
+        dispatch(showToast({ message: "Name is required", variant: "danger" }));
+        return false;
+      }
+    
+      if (!email.trim()) {
+        dispatch(showToast({ message: "Email is required", variant: "danger" }));
+        return false;
+      }
+    
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        dispatch(showToast({ message: "Invalid email address", variant: "danger" }));
+        return false;
+      }
+    
+      if (!mobile.trim()) {
+        dispatch(showToast({ message: "Mobile is required", variant: "danger" }));
+        return false;
+      }
+    
+      if (!message.trim()) {
+        dispatch(showToast({ message: "Message cannot be empty", variant: "danger" }));
+        return false;
+      }
+    
+      return true;
+    };
+    const handleSubmit = ()=>{
+      if(!validateForm())return
     }
     return(<div className='contact-us-section'>
         <Container className='contact-us-section-container'>
@@ -90,7 +126,7 @@ export const ContactUsHome = ()=>{
           </Col>
 
           <Col md={4}>
-            <CustomButton text='Search' action={()=>{}}/>
+            <CustomButton text='Search' action={handleSubmit}/>
           </Col>
         </Row>
       </Form>

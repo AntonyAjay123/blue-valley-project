@@ -21,9 +21,18 @@ import SecurityIcon from "@mui/icons-material/Security";
 import ShieldIcon from "@mui/icons-material/Shield";
 import { ProjectLocation } from "../components/ProjectComponents/ProjectLocation/ProjectLocation"
 import { madhubhanAbout } from "../constants"
+import { ProjectDetails } from "../components/ProjectComponents/ProjectDetails/ProjectDetails"
+import { useEffect } from "react"
+import { useDispatch } from "react-redux"
+import { setCurPage, setCurProject } from "../store/pageSlice"
 
 
 export const Madhuban = ()=>{
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(setCurPage('projects'))
+    dispatch(setCurProject('madhuban'))
+  },[])
     const facilities = [
   {
     icon: TempleBuddhistIcon,
@@ -100,6 +109,7 @@ export const Madhuban = ()=>{
         </section>
         <section id="about-project">
     <ProjectAbout title='PREMIUM VILLA PLOTS' about={madhubhanAbout} subtext="Near International Airport, Bengaluru"/>
+    <ProjectDetails/>
     </section>
     <section id="gallery-project">
     <ProjectGallery images = {images}/>

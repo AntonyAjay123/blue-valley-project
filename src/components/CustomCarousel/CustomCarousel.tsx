@@ -5,21 +5,29 @@ import "./CustomCarousel.scss";
 import NorthTownImage from '../../assets/northtown.jpg'
 import MadhubanImage from '../../assets/madhuban.png'
 import { CustomButton } from "../CustomButton/CustomButton";
+import { useNavigate } from "react-router-dom";
 
 export const HomeSlider = () => {
-
+    const navigate = useNavigate()
     const slides = [
         {
             image: NorthTownImage,
             title: "North Town",
             subtitle: "Villa Plots at the misty foot of Nandi Hills",
-            city: "Bengaluru"
+            city: "Bengaluru",
+            action: ()=>{
+                
+                navigate("/projects/northtown")
+            }
         },
         {
             image: MadhubanImage,
             title: "Madhuban",
             subtitle: "Premium gated community with villa plots near bangalore internal airport",
-            city: "Devanahalli Town, Bengaluru"
+            city: "Devanahalli Town, Bengaluru",
+            action: ()=>{
+                navigate("/projects/madhuban")
+            }
         }
     ];
 
@@ -56,7 +64,7 @@ export const HomeSlider = () => {
                                 {slide.city}
                             </p>
 
-                            <CustomButton text="EXPLORE" action={()=>{}}/>
+                            <CustomButton text="EXPLORE" action={slide.action}/>
 
                         </div>
 
