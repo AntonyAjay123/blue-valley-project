@@ -1,6 +1,5 @@
 import { Card } from "react-bootstrap";
 import type { InfoItemProps } from "../../../types";
-import Icon from "@mui/material/Icon";
 import './ContactInfo.scss'
 
 export const ContactInfo = ({icon,label,info}:InfoItemProps) =>{

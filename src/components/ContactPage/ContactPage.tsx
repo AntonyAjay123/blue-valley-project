@@ -1,14 +1,13 @@
-import { Button, Container, Form } from "react-bootstrap"
+import {Container, Form } from "react-bootstrap"
 import './ContactPage.scss'
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { CustomButton } from "../CustomButton/CustomButton";
 import EmailIcon from "@mui/icons-material/Email";
 import CallIcon from '@mui/icons-material/Call';
 import PlaceIcon from "@mui/icons-material/Place";
 import { address, email, phoneNumber } from "../../constants";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { showToast } from "../../store/toastSlice";
-import type { RootState } from "../../store/store";
 export const ContactPage = ()=>{
     const [formData, setFormData] = useState({
     name: "",

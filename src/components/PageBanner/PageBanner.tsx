@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import './PageBanner.scss'
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
-import { AboutSection } from '../AboutSection/AboutSection';
 
 type PageBannerProps = {
     image:any,

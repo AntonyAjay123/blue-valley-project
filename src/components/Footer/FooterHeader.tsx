@@ -4,11 +4,6 @@ import CallIcon from '@mui/icons-material/Call';
 import PlaceIcon from "@mui/icons-material/Place";
 import { FooterBody } from './FooterBody';
 
-type contactDetailType = {
-    id:string;
-    value:string;
-    icon:any
-}
 export const FooterHeader = () =>{
     const contactDetails = [
         {

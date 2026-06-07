@@ -1,8 +1,5 @@
 import {
-  Navbar,
-  Nav,
   Container,
-  NavDropdown,
 } from "react-bootstrap";
 import './Navbar.scss'
 import { useNavigate } from "react-router-dom";

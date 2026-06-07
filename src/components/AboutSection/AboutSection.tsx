@@ -1,4 +1,3 @@
-import { Container } from "react-bootstrap";
 import './AboutSection.scss'
 export const AboutSection = () =>{
     return <div className="about-section">

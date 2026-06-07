@@ -5,12 +5,10 @@ import logo from '../../assets/logo_transparent.png';
 import { ContactInfo } from "./ContactInfo/ContactInfo";
 import EmailIcon from "@mui/icons-material/Email";
 import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
 
 import { email, phoneNumber } from "../../constants";
 import { CustomNavbar } from "../navbar/Navbar";
 import { useEffect, useState } from "react";
-import Menu from "@mui/material/Menu";
 import { useNavigate } from "react-router-dom";
 
 export const Header = ()=>{

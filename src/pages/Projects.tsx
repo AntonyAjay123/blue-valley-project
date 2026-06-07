@@ -1,7 +1,6 @@
 import { PageBanner } from "../components/PageBanner/PageBanner"
 import ProjectImage from "../assets/projects.jpg"
 import { ProjectSection } from "../components/ProjectSection/ProjectSection"
-import type { RootState } from "../store/store"
 import { useDispatch } from "react-redux"
 import { useEffect } from "react"
 import { setCurPage, setCurProject } from "../store/pageSlice"
