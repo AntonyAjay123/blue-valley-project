@@ -1,32 +1,115 @@
-.project-banner{
-    height:100vh;
-    width: 100%;
-    background-size: 90% auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    .contact-form{
+.project-banner {
+  height: 100vh;
+  width: 100%;
+  background-size: 90% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  .contact-form {
     width: 300px;
     padding: 20px;
     background: #ffffff4d;
+
     position: absolute;
     top: 25vh;
-    left: 15vh;
+    left: clamp(24px, 8vw, 120px);
+
     margin: 0;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 10px 20px #00000030, 0 6px 6px #0000003b;
-    span{
-        color:#581557;
-        font-size: 2rem;
+
+    box-shadow:
+      0 10px 20px #00000030,
+      0 6px 6px #0000003b;
+
+    span {
+      color: #581557;
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 20px;
     }
-    }
-    .project-contact-input{
-        border: none;
+  }
+
+  .project-contact-input {
+    border: none;
     padding: 5px 5px 5px 10px;
     font-size: 16px;
-    outline: 0px;
+    outline: 0;
     resize: none;
     border-radius: 4px;
     background-color: var(--c2);
+  }
+}
+
+/* Large Tablets */
+@media (max-width: 1200px) {
+  .project-banner {
+    background-size: cover;
+
+    .contact-form {
+      left: 40px;
     }
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .project-banner {
+    background-size: cover;
+
+    .contact-form {
+      width: 280px;
+      left: 30px;
+      top: 20vh;
+
+      span {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .project-banner {
+    background-size: cover;
+    background-position: center;
+
+    .contact-form {
+      width: 90%;
+      max-width: 360px;
+
+      left: 50%;
+      top: 50%;
+
+      transform: translate(-50%, -50%);
+
+      padding: 18px;
+
+      span {
+        font-size: 1.75rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .project-banner {
+    .contact-form {
+      width: calc(100% - 32px);
+      max-width: none;
+      padding: 16px;
+
+      span {
+        font-size: 1.5rem;
+      }
+    }
+
+    .project-contact-input {
+      font-size: 14px;
+    }
+  }
 }

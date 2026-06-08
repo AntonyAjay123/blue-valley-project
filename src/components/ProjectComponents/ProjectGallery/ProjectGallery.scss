@@ -1,14 +1,12 @@
 .image-container{
-    width:100%;
-    display:flex;
-    flex-wrap: wrap;
+    width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
     .project-image{
-        width:33.333%;
-        img{
-            width:75%;
-            margin-bottom:16px;
-            border-radius: .25rem !important;
-        }
+       cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
     }
 }
 
@@ -18,11 +16,16 @@
   border-radius: 8px;
 
   img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
+  width: 100%;
+  height: 220px;        // consistent card height
+  object-fit: cover;    // keeps cropping clean
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project-image:hover img {
+  transform: scale(1.05);
+}
 
   &:hover img {
     transform: scale(1.05);
@@ -44,4 +47,16 @@
   width: 100%;
   max-height: 80vh;
   object-fit: contain;
+}
+@media (max-width: 768px) {
+  .project-image img {
+    height: 180px;
+  }
+}
+.carousel-image {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+  margin: auto;
 }

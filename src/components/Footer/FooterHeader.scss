@@ -44,23 +44,32 @@
     color: var(--c2);
     position: relative;
 }
-.footer-body-title::before{
-    content: "";
-    width: 40px;
-    height: 5px;
-    background-color: var(--c1);
-    position: absolute;
-    top: 44px;
+.footer-body-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 18px;
 }
-.footer-body-title::after{
-    content: "";
-    width: 78px;
-    height: 1px;
-    background-color: var(--c1);
-    position: absolute;
-    left: 40px;
-    margin-top: 3px;
-    top: 44px;
+
+.footer-body-title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 40px;
+  height: 5px;
+  background-color: var(--c1);
+}
+
+.footer-body-title::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 40px;
+
+  width: 78px;
+  height: 1px;
+  background-color: var(--c1);
 }
 .footer-body-content{
     list-style: none;
