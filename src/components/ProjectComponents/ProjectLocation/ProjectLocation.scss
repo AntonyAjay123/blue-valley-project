@@ -1,8 +1,22 @@
-.project-location{
-    width: 600px;
-    height:75vh;
-}
+// .project-location{
+//     width: 600px;
+//     height:75vh;
+// }
 .project-location {
   width: 100%;
   cursor: zoom-in;
+}
+.project-location {
+  width: 100%;
+//   max-width: 1200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .project-location {
+    width: 100%;
+    height: auto;
+  }
 }
