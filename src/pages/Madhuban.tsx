@@ -20,7 +20,7 @@ import ParkIcon from "@mui/icons-material/Park";
 import SecurityIcon from "@mui/icons-material/Security";
 import ShieldIcon from "@mui/icons-material/Shield";
 import { ProjectLocation } from "../components/ProjectComponents/ProjectLocation/ProjectLocation"
-import { address, email, madhubanAddress, madhubanPhoneNumber, madhubhanAbout, phoneNumber } from "../constants"
+import { email, madhubanAddress, madhubanPhoneNumber, madhubhanAbout } from "../constants"
 import { ProjectDetails } from "../components/ProjectComponents/ProjectDetails/ProjectDetails"
 import { useEffect } from "react"
 import { useDispatch } from "react-redux"
