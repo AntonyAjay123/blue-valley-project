@@ -36,7 +36,7 @@ export const HomeSlider = () => {
             fade
             controls
             indicators={false}
-            interval={4000}
+            interval={3000}
             className="home-slider"
         >
 

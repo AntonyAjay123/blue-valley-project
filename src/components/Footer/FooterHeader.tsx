@@ -3,6 +3,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import CallIcon from '@mui/icons-material/Call';
 import PlaceIcon from "@mui/icons-material/Place";
 import { FooterBody } from './FooterBody';
+import { email } from '../../constants';
 
 export const FooterHeader = () =>{
     const contactDetails = [
@@ -18,7 +19,7 @@ export const FooterHeader = () =>{
         },
         {
             id:'email',
-            value:'AKSHAYAPROPERTIES.CO',
+            value:email,
             icon:<EmailIcon/>
         }
     ]
