@@ -2,7 +2,7 @@
     display:flex;
     padding:32px;
     gap:16px;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
 }
 .contact-form {
   display: flex;
@@ -46,3 +46,18 @@
 //   outline: none;
 //   color: black;
 // }
+
+@media (max-width:768px) {
+    .contact-container{
+    display:flex;
+    padding:32px;
+    gap:16px;
+    flex-wrap: wrap;
+}
+.contact-form{
+    width:100%;
+}
+.contact-input-container{
+    width:100%;
+}
+}

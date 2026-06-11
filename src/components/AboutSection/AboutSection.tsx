@@ -3,7 +3,7 @@ export const AboutSection = () =>{
     return <div className="about-section">
 
         <div className="section-title-container">
-            <h1 className="section-title"> About<span className="title-us">Us</span></h1>
+            <h1 className="section-title center"> About<span className="title-us">Us</span></h1>
         </div>
         <div className="about-content">
             At Akshaya Properties, we believe that buying land is not just an investment — it is a decision that shapes your family’s future, financial security, and lifestyle. For over a decade, we have been dedicated exclusively to the development and marketing of premium villa plots in the rapidly growing region of North Bengaluru.

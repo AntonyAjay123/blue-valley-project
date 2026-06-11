@@ -9,24 +9,40 @@
         display: flex;
         justify-content: center;
         height: auto;
-    .section-title{
-        font-size: 30px;
+    .section-title {
+    font-size: 30px;
     text-transform: uppercase;
     color: var(--c3);
-    display: inline;
-    align-items: center;
-    grid-gap: 12px;
     font-weight: 500;
-    display: inline-flex;
     position: relative;
+    display: inline-block;
     margin-bottom: 65px;
-    span{
+    &::before{
+    content: "";
+    display: block;
+    height: 1px;
+    background: #dbdbdb;
+    position: absolute;
+    width: 200px;
+    bottom: -9px;
+    transform: translateX(-20%);
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -17px;
+        width: 150px;
+        height: 1px;
+        background: #dbdbdb;
+    }
+
+    span {
+        color: var(--c1);
         font-size: inherit;
-    color: var(--c1);
-    margin-left: 0;
-    padding-left: 0;
     }
-    }
+}
 }
 }
 .about-content{

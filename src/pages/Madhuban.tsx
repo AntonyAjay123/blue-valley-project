@@ -20,11 +20,12 @@ import ParkIcon from "@mui/icons-material/Park";
 import SecurityIcon from "@mui/icons-material/Security";
 import ShieldIcon from "@mui/icons-material/Shield";
 import { ProjectLocation } from "../components/ProjectComponents/ProjectLocation/ProjectLocation"
-import { madhubhanAbout } from "../constants"
+import { address, email, madhubanAddress, madhubanPhoneNumber, madhubhanAbout, phoneNumber } from "../constants"
 import { ProjectDetails } from "../components/ProjectComponents/ProjectDetails/ProjectDetails"
 import { useEffect } from "react"
 import { useDispatch } from "react-redux"
 import { setCurPage, setCurProject } from "../store/pageSlice"
+import { ProjectContact } from "../components/ProjectComponents/ProjectContact/ProjectContact"
 
 
 export const Madhuban = ()=>{
@@ -122,6 +123,9 @@ export const Madhuban = ()=>{
     </section>
     <section id="location-project">
     <ProjectLocation image={""}/>
+    </section>
+    <section id="contact-project">
+    <ProjectContact email={email} phoneNo={madhubanPhoneNumber} address={madhubanAddress}/>
     </section>
     </div>)
 }

@@ -12,12 +12,13 @@ import SsidChartIcon from '@mui/icons-material/SsidChart';
 import WaterDropIcon from '@mui/icons-material/WaterDrop';
 import ForestIcon from '@mui/icons-material/Forest';
 import { ProjectLayout } from "../components/ProjectComponents/ProjectLayout/ProjectLayout"
-import { northTownAbout } from "../constants"
+import { email, northTownAbout, northTownAddress, northTownPhoneNumber } from "../constants"
 import LocationMap from '../assets/northtown_images/layout/locationMap.jpg'
 import { ProjectLocation } from "../components/ProjectComponents/ProjectLocation/ProjectLocation"
 import { useEffect } from "react"
 import { setCurPage, setCurProject } from "../store/pageSlice"
 import { useDispatch } from "react-redux"
+import { ProjectContact } from "../components/ProjectComponents/ProjectContact/ProjectContact"
 
 export const NorthTown = ()=>{
     const dispatch = useDispatch();
@@ -79,6 +80,9 @@ console.log(images)
     </section>
     <section id="location-project">
     <ProjectLocation image={LocationMap}/>
+    </section>
+    <section id="location-project">
+    <ProjectContact email={email} phoneNo={northTownPhoneNumber} address={northTownAddress}/>
     </section>
     </>)
 }

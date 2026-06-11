@@ -2,6 +2,7 @@ import { Container, Modal } from "react-bootstrap"
 import type { RootState } from "../../../store/store"
 import { useSelector } from "react-redux"
 import { useState } from "react"
+import './Projectlocation.scss'
 type props = {
     image:any
 }
