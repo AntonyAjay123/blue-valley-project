@@ -21,6 +21,7 @@
     "react-dom": "^19.2.6",
     "react-redux": "^9.3.0",
     "react-router-dom": "^7.15.1",
+    "resend": "^6.12.4",
     "sass": "^1.99.0",
     "sass-embedded": "^1.99.0"
   },

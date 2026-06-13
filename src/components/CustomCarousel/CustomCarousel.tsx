@@ -13,8 +13,8 @@ export const HomeSlider = () => {
         {
             image: NorthTownImage,
             title: "North Town",
-            subtitle: "Villa Plots at the misty foot of Nandi Hills",
-            city: "Bengaluru",
+            subtitle: "Gated community with Villa Plots near Bengaluru International Airport",
+            city: "Devenahalli- Doddabalapur Road",
             action: ()=>{
                 
                 navigate("/projects/northtown")
