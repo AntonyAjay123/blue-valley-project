@@ -51,8 +51,47 @@ export const ContactUsHome = ()=>{
     
       return true;
     };
-    const handleSubmit = ()=>{
+    const handleSubmit = async ()=>{
       if(!validateForm())return
+      try{
+        const res = await fetch("/api/enquiry",{
+          method:"POST",
+          headers:{
+            "Content-Type":"application/json"
+          },
+          body: JSON.stringify({
+            name:formData.name,
+            email:formData.email,
+            mobile:formData.mobile,
+            message:formData.message
+          })
+        })
+        if(!res.ok){
+          throw new Error("Failed to send enquiry");
+        }
+        dispatch(
+      showToast({
+        message: "Enquiry sent successfully!",
+        variant: "success",
+      })
+    );
+
+    // clear form after success
+    setFormData({
+      name: "",
+      email: "",
+      mobile: "",
+      message: "",
+    });
+  }
+  catch(error){
+    dispatch(
+      showToast({
+        message: "Something went wrong. Please try again.",
+        variant: "danger",
+      })
+    );
+  }
     }
     return(<div className='contact-us-section'>
         <Container className='contact-us-section-container'>
