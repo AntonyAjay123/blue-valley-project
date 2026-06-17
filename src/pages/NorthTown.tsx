@@ -12,7 +12,7 @@ import SsidChartIcon from '@mui/icons-material/SsidChart';
 import WaterDropIcon from '@mui/icons-material/WaterDrop';
 import ForestIcon from '@mui/icons-material/Forest';
 import { ProjectLayout } from "../components/ProjectComponents/ProjectLayout/ProjectLayout"
-import { address, email, northTownAbout, northTownAddress, northTownPhoneNumber, phoneNumber } from "../constants"
+import { address, email, northTownAbout, phoneNumber } from "../constants"
 import LocationMap from '../assets/northtown_images/layout/locationMap.jpg'
 import { ProjectLocation } from "../components/ProjectComponents/ProjectLocation/ProjectLocation"
 import { useEffect } from "react"
