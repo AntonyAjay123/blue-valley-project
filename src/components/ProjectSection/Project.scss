@@ -60,7 +60,8 @@
 
 .projects-header{
     text-transform: uppercase;
-    color:var(--c1)
+    color:var(--c1);
+    text-align:center;
 }
 
 .projects-container{
@@ -82,7 +83,7 @@
 .project-section {
   display: flex;
   flex-wrap: wrap;
-//   justify-content: center;
+  justify-content: center;
   gap: 32px;
 }
 

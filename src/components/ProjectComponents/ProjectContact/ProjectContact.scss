@@ -85,3 +85,21 @@
     flex-direction: column;
   }
 }
+.contact-form {
+  input,
+  textarea {
+    border: none !important;
+    background: #f2f2f5;
+    padding: 16px 24px;
+    border-radius: 10px;
+    font-size: 18px;
+
+    &:focus,
+    &:focus-visible {
+      background: #f2f2f5;
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  }
+}

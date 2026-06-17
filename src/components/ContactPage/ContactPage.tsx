@@ -20,41 +20,7 @@ export const ContactPage = ()=>{
   // // useEffect(()=>{
   // //   console.log("message changed")
   // // },[message])
-const validateForm = () => {
-  const { name, email, mobile, message } = formData;
-   if (!name.trim()) {
-    console.log("checked name")
-    dispatch(showToast({ message: "Name is required", variant: "danger" }));
-    return false;
-  }
 
-  if (!email.trim()) {
-    dispatch(showToast({ message: "Email is required", variant: "danger" }));
-    return false;
-  }
-
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    dispatch(showToast({ message: "Invalid email address", variant: "danger" }));
-    return false;
-  }
-
-  if (!mobile.trim()) {
-    dispatch(showToast({ message: "Mobile is required", variant: "danger" }));
-    return false;
-  }
-
-  if (!message.trim()) {
-    dispatch(showToast({ message: "Message cannot be empty", variant: "danger" }));
-    return false;
-  }
-
-  return true;
-};
-const handleSubmit = ()=>{
-  console.log("here in submit")
-  if(!validateForm())return
-}
 const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
   const { name, value } = e.target;
 
@@ -63,6 +29,77 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
     [name]: value,
   }));
 }
+        const validateForm = () => {
+            const { name, email, mobile, message } = formData;
+             if (!name.trim()) {
+              console.log("checked name")
+              dispatch(showToast({ message: "Name is required", variant: "danger" }));
+              return false;
+            }
+          
+            if (!email.trim()) {
+              dispatch(showToast({ message: "Email is required", variant: "danger" }));
+              return false;
+            }
+          
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+              dispatch(showToast({ message: "Invalid email address", variant: "danger" }));
+              return false;
+            }
+          
+            if (!mobile.trim()) {
+              dispatch(showToast({ message: "Mobile is required", variant: "danger" }));
+              return false;
+            }
+          
+            if (!message.trim()) {
+              dispatch(showToast({ message: "Message cannot be empty", variant: "danger" }));
+              return false;
+            }
+          
+            return true;
+          };
+          const handleSubmit = async ()=>{
+            if(!validateForm())return
+            try{
+              const res = await fetch("/api/enquiry",{
+                method:"POST",
+                headers:{
+                  "Content-Type":"application/json"
+                },
+                body: JSON.stringify({
+                  name:formData.name,
+                  email:formData.email,
+                  mobile:formData.mobile,
+                  message:formData.message
+                })
+              })
+              if(!res.ok){
+                throw new Error("Failed to send enquiry");
+              }
+              dispatch(
+            showToast({
+              message: "Enquiry sent successfully!",
+              variant: "success",
+            })
+          );
+          setFormData({
+      name: "",
+      email: "",
+      mobile: "",
+      message: "",
+    });
+  }
+  catch(error){
+    dispatch(
+      showToast({
+        message: "Something went wrong. Please try again.",
+        variant: "danger",
+      })
+    );
+  }
+    }
     return (<Container className="contact-container">
         <div className="contact-input-container">
             <h1 className="section-header"> SEND US A MESSAGE</h1>

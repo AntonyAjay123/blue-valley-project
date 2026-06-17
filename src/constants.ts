@@ -8,3 +8,4 @@ export const madhubanAddress='Savakanahalli Village, Kasaba Hobli, Devanahalli, 
 export const madhubanPhoneNumber = '+91 97416 26973'
 export const northTownAddress = '#41, Nandi Durga Road,Above ICICI Bank, Jayamahal extn.,Bangalore- 560046.'
 export const northTownPhoneNumber = '+91 9343 368 728'
+

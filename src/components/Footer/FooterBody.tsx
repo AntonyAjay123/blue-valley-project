@@ -38,5 +38,11 @@ export const FooterBody = ()=>{
             <p><span className="content-links">Government Holiday :Occasionally</span></p>
             </div>
         </div>
+        <div className="footer-body-list">
+            <h4 className="footer-body-title">Other Links</h4>
+            <div className="footer-body-content">
+            <p><span className="content-links" onClick={()=>navigate('/privacy-policy')}>Privacy Policy</span></p>
+            </div>
+        </div>
     </Container>
 }

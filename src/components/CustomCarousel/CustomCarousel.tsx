@@ -2,8 +2,8 @@ import { Carousel } from "react-bootstrap";
 
 import "./CustomCarousel.scss";
 
-import NorthTownImage from '../../assets/northtown.jpg'
-import MadhubanImage from '../../assets/madhuban.png'
+import NorthTownImage from '../../assets/north_town_image.jpg'
+import MadhubanImage from '../../assets/madhuban_image.jpg'
 import { CustomButton } from "../CustomButton/CustomButton";
 import { useNavigate } from "react-router-dom";
 

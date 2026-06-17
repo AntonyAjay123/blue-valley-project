@@ -1,5 +1,5 @@
 import { ProjectBanner } from "../components/ProjectComponents/ProjectBanner/ProjectBanner"
-import NorthTownImage from '../assets/northtown.jpg'
+import NorthTownImage from '../assets/north_town_image.jpg'
 import LayoutPlan from '../assets/northtown_images/layout/layoutPlan.jpg'
 import { ProjectAbout } from "../components/ProjectComponents/ProjectAbout/ProjectAbout"
 import { ProjectGallery } from "../components/ProjectComponents/ProjectGallery/ProjectGallery"

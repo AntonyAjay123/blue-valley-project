@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap";
-import NorthTown from '../../assets/northtown.jpg'
-import Madhuban from '../../assets/madhuban.png'
+import NorthTown from '../../assets/north_town_image.jpg'
+import Madhuban from '../../assets/madhuban_image.jpg'
 import { ProjectCard } from "./ProjectCard";
 import './Project.scss'
 import { useNavigate } from "react-router-dom";

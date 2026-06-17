@@ -3,7 +3,7 @@ import { ProjectBanner } from "../components/ProjectComponents/ProjectBanner/Pro
 import { ProjectGallery } from "../components/ProjectComponents/ProjectGallery/ProjectGallery"
 import { ProjectLayout } from "../components/ProjectComponents/ProjectLayout/ProjectLayout"
 import { ProjectSpecification } from "../components/ProjectComponents/ProjectSpecification/ProjectSpecification"
-import MadhubanImage from '../assets/madhuban.png'
+import MadhubanImage from '../assets/madhuban_image.jpg'
 import MadhubanLayout from '../assets/MadhubanImages/layout/Madhuban Layout plan.png'
 import TempleBuddhistIcon from "@mui/icons-material/TempleBuddhist";
 import AddRoadIcon from "@mui/icons-material/AddRoad";

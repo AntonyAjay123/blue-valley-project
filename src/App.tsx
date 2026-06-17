@@ -14,6 +14,7 @@ import { ProjectHeader } from './components/ProjectHeader/ProjectHeader'
 import { NorthTown } from './pages/NorthTown'
 import { Madhuban } from './pages/Madhuban'
 import { ToastMessage } from './components/Toast/ToastMessage'
+import { PrivacyPolicy } from './components/PrivacyPolicy/PrivacyPolicy';
 function App() {
   const curProject = useSelector((state:RootState)=>state.page.curProject)
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path='/projects' element={<Projects/>}/>
         <Route path='/projects/northtown' element={<NorthTown/>}/>
         <Route path='/projects/madhuban' element={<Madhuban/>}/>
+        <Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
       </Routes>
       <FooterHeader/>
     </div>
