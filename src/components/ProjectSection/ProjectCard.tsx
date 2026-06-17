@@ -12,7 +12,7 @@ import { CustomButton } from "../CustomButton/CustomButton";
 export const ProjectCard = ({image,title,text,city,buttonAction}:CardProps)=>{
     return (
         <div className="project-card-container">
-        <Card className="project-card">
+        <Card className="project-card" onClick={buttonAction}>
             <Card.Img className="project-card-image" variant="top" src={image}/>
             <Card.Body className="project-card-body">
         <Card.Title className="project-card-title">{title}</Card.Title>
