@@ -14,8 +14,8 @@ export const ProjectSection = ()=>{
             id:1,
             image:NorthTown,
             projectName:'North Town',
-            text:'Villa Plots at the misty foot of Nandi Hills, Bengaluru',
-            city:'DODDABALLAPURA ROAD, BANGALORE',
+            text:'Gated community with villa plots near Bengaluru International Airport',
+            city:'Devenahalli- Doddabalapur Road',
             action:()=>{
                 dispatch(setCurPage('projects'))
                 dispatch(setCurProject('northtown'))
@@ -26,7 +26,7 @@ export const ProjectSection = ()=>{
             id:2,
             image:Madhuban,
             projectName:'Madhuban',
-            text:'Premium gated community with villa plots near bangalore internal airport',
+            text:'Premium gated community with villa plots near Bengaluru International Airport',
             city:'DEVANAHALLI TOWN, BANGALORE',
             action:()=>{
                 dispatch(setCurPage('projects'))

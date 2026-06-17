@@ -40,3 +40,9 @@
   max-height: 90vh;
   object-fit: contain;
 }
+.layout-modal {
+  .modal-dialog {
+    width: 95vw;
+    max-width: 95vw;
+  }
+}

@@ -23,7 +23,7 @@ export const HomeSlider = () => {
         {
             image: MadhubanImage,
             title: "Madhuban",
-            subtitle: "Premium gated community with villa plots near bangalore internal airport",
+            subtitle: "Premium gated community with villa plots near Bengaluru International Airport",
             city: "Devanahalli Town, Bengaluru",
             action: ()=>{
                 navigate("/projects/madhuban")
