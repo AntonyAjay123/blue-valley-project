@@ -1,7 +1,7 @@
 import {Dropdown } from "react-bootstrap";
 import CallIcon from '@mui/icons-material/Call';
 import './Header.scss';
-import logo from '../../assets/logo_transparent.png';
+import logo from '../../assets/akshayaLogo.png';
 import { ContactInfo } from "./ContactInfo/ContactInfo";
 import EmailIcon from "@mui/icons-material/Email";
 import MenuIcon from "@mui/icons-material/Menu";

@@ -12,8 +12,8 @@ export default async function enquiry(req,res){
         const {name,email,mobile,message} = body;
         const resend = new Resend(process.env.RESEND_API_KEY)
         await resend.emails.send({
-            from:"onboarding@resend.dev",
-            to: "ajaygeoffrey456@gmail.com",
+            from:"enquiry@akshayaproperties.co",
+            to: "akshayaproperties15@gmail.com",
             subject:"New Enquiry",
             html:`<p>${name}</p><p>${email}</p><p>${mobile}</p><p>${message}</p>`
         })

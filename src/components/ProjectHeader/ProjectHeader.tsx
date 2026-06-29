@@ -1,6 +1,6 @@
 import './ProjectHeader.scss'
 import { Navbar,Nav,Container } from 'react-bootstrap'
-import logo from '../../assets/website_logo.jpeg'
+import logo from '../../assets/akshayaLogo.png'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { setCurProject } from '../../store/pageSlice'

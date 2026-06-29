@@ -1,5 +1,5 @@
 export const phoneNumber = "+91 9964766886"
-export const email = "propertiesakshaya0@gmail.com"
+export const email = "akshayaproperties15@gmail.com"
 export const address = '#135/5. Shankar Building, Bank of Baroda Backside, B.B. Road, Devanahalli Town, Bangalore Rural, 562110'
 export const northTownAbout='Come, discover the best of both worlds – serene and fresh home base and the metropolitan advantages of Bangalore city, at Smilee Anandavana I. Gated townships like Smilee Anandavana-Ⅰ have transformed themselves from lifestyle statements to modern-day need. Privacy and security is at a premium in overcrowded towns where freshness is but a dream. Gated townships featuring lush greenery, recreational spaces and maximum security offer the good life in an attractive package'
 export const madhubhanAbout = 'Awaken to a life as refreshing as the first breath of mountain air, where luxury, ambition, and dream-filled sunsets define each day. Nestled amidst lush landscapes and the grandeur of Devanahalli Fort,this is more than a plot - it is a launchpad shaped by nature’s beauty.'
